@@ -1,11 +1,11 @@
-#include <Display_library_functions.au3>
+#include "Display_library_functions.au3"
 
 HotKeySet("#q", "TopLeft")
 HotKeySet("#w", "TopRight")
 HotKeySet("#a", "BotLeft")
 HotKeySet("#s", "BotRight")
 
-$array = _DisplayKeySettings(_NumberAndNameMonitors())
+$array = _DisplayKeySettings(Default)
 
 Local $Monitors[1][14]
 $Monitors[0][0] = 0
@@ -18,7 +18,7 @@ For $i = 1 To $array[0][0]
 		$Monitors[UBound($Monitors, 1)-1][1] = $array[$i][3] ;ypos
 		$Monitors[UBound($Monitors, 1)-1][2] = $array[$i][4] ;width
 		$Monitors[UBound($Monitors, 1)-1][3] = $array[$i][5] ;height
-		$Monitors[UBound($Monitors, 1)-1][4] = $array[$i][4] / 2 ;1/4 size xqq
+		$Monitors[UBound($Monitors, 1)-1][4] = $array[$i][4] / 2 ;1/4 size x
 		$Monitors[UBound($Monitors, 1)-1][5] = $array[$i][5] / 2 ;1/4 size y
 		$Monitors[UBound($Monitors, 1)-1][6] = $array[$i][2] ;xpos top left
 		$Monitors[UBound($Monitors, 1)-1][7] = $array[$i][3] ;ypos top left
